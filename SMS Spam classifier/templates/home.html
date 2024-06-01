@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Spam Classifier</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <style>
+            body {
+                background-color: #f8f9fa;
+            }
+            header {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            .container {
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                max-width: 600px;
+            }
+            .btn-primary {
+                background-color: #007bff;
+                border-color: #007bff;
+            }
+        </style>
+    </head>
+
+<body>
+    <header class="text-center my-4">
+        <h2><a href="/" class="text-dark" style="text-decoration: none;">SMS Spam detector</a></h2>
+    </header>
+
+    <div class="container mx-auto">
+    <form action="/predict" method="POST">
+        <div class="form-group">
+            <label for="comment">Enter Your Message Here: </label>
+            <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body> 
+</html>

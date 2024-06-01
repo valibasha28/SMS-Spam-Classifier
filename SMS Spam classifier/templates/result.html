@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Spam Classifier</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <style>
+            body {
+                background-color: #f8f9fa;
+            }
+            header {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            .container {
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                max-width: 600px;
+                margin: auto;
+            }
+            .btn-primary {
+                background-color: #007bff;
+                border-color: #007bff;
+            }
+            .results h1 {
+                color: rgb(0, 81, 255);
+                font-size: 40px;
+                text-align: center;
+            }
+            .results h2 {
+                text-align: center;
+            }
+            .results .spam {
+                color: red;
+            }
+            .results .not-spam {
+                color: blue;
+            }
+        </style>
+    </head>
+
+<body>
+    <header>
+        <h2><a href="/" class="text-dark" style="text-decoration: none;">SMS Spam detector</a></h2>
+    </header>
+
+    <div class="container">
+        <div class="results">
+        <h1><b>RESULT:</b></h1>
+        <div>
+
+            {% if prediction == 1 %}
+            <h2 class="spam">Spam</h2>
+            
+            {% elif prediction == 0 %}
+            <h2 class="not-spam">Not a Spam</h2>
+            {% endif %}
+        </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
