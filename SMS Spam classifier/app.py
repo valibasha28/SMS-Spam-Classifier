@@ -18,6 +18,3 @@ def predict():
     data = cv.transform(data).toarray()
     pred = model.predict(data)
     return render_template('result.html', prediction=pred)
-
-if __name__ == '__main__':
-    app.run(debug=True)
